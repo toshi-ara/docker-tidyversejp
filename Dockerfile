@@ -2,7 +2,7 @@
 # Released under the MIT license
 # https://opensource.org/licenses/MIT
 
-FROM r-base:4.0.2
+FROM r-base:4.0.3
 
 # Change environment to Japanese (Character and DateTime)
 ENV LANG ja_JP.UTF-8
@@ -15,7 +15,7 @@ RUN sed -i '$d' /etc/locale.gen && \
     ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 
-LABEL lastupdate=2020.10.5
+LABEL lastupdate=2020.10.13
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
     libcurl4-openssl-dev libssl-dev libxml2-dev zlib1g-dev \

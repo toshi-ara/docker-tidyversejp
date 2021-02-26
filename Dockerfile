@@ -15,6 +15,7 @@ RUN sed -i '$d' /etc/locale.gen && \
     ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 
+
 LABEL lastupdate=2021.2.26
 RUN apt-get update && \
     apt-get -y dist-upgrade && \
@@ -31,6 +32,14 @@ RUN install2.r --error \
       formatR \
       remotes \
       githubinstall
+
+## for Visual Studio Code
+RUN install2.r --error \
+      --deps TRUE \
+      -r https://cloud.r-project.org \
+      -n -1 \
+      languageserver && \
+    installGithub.r -u FALSE ManuelHentschel/vscDebugger
 
 WORKDIR /workdir
 

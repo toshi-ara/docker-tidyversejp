@@ -1,5 +1,5 @@
 #!/bin/bash
-VER=2021.2.26
+VER=2021.5.19
 
 docker build \
        -t toshiara/tidyversejp \

@@ -1,8 +1,9 @@
+# Copyright (c) 2021 ARA Toshiaki
 # Copyright (c) 2020 ARA Toshiaki
 # Released under the MIT license
 # https://opensource.org/licenses/MIT
 
-FROM r-base:4.0.4
+FROM r-base:4.1.0
 
 # Change environment to Japanese (Character and DateTime)
 ENV LANG ja_JP.UTF-8
@@ -16,7 +17,7 @@ RUN sed -i '$d' /etc/locale.gen && \
 
 
 
-LABEL lastupdate=2021.2.26
+LABEL lastupdate=2021.5.19
 RUN apt-get update && \
     apt-get -y dist-upgrade && \
     apt-get install --no-install-recommends -y \

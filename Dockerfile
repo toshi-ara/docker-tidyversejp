@@ -17,7 +17,7 @@ RUN sed -i '$d' /etc/locale.gen && \
 
 
 
-LABEL lastupdate=2021.11.12
+LABEL lastupdate=2021.11.27
 RUN apt-get update && \
     apt-get -y dist-upgrade && \
     apt-get install --no-install-recommends -y \

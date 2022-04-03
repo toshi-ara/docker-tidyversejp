@@ -3,7 +3,7 @@
 # Released under the MIT license
 # https://opensource.org/licenses/MIT
 
-FROM r-base:4.1.2
+FROM r-base:4.1.3
 
 # Change environment to Japanese (Character and DateTime)
 ENV LANG ja_JP.UTF-8
@@ -17,7 +17,7 @@ RUN sed -i '$d' /etc/locale.gen && \
 
 
 
-LABEL lastupdate=2021.11.27
+LABEL lastupdate=2022.4.3
 RUN apt-get update && \
     apt-get -y dist-upgrade && \
     apt-get install --no-install-recommends -y \

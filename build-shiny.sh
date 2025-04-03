@@ -1,5 +1,5 @@
 #!/bin/bash
-VER=2022.4.3
+VER=2025.4.3
 
 docker build -f Dockerfile.shiny\
        -t toshiara/tidyversejp:shiny \
